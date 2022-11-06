@@ -186,3 +186,75 @@ img {
     box-shadow: 0 23px 38px 0 rgb(0 0 0 / 10%);
     z-index: 99;
 }
+
+
+/* Tab menu */
+.section_menu{
+    background-color: #e0dbd4;
+}
+.section_menu-header{
+    width: 260px ;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.tablist{
+    justify-content: center;
+}
+.nav-pills .nav-link{
+    border: 1px solid rgb(159, 159, 159);
+    border-radius: 40px;
+}
+.nav-pills .nav-link.active{
+    color: #fff;
+    background-color: #c89551;
+}
+.nav-link{
+    color: #000;
+}
+.product-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 1000px;
+}
+.product-item{
+    display: flex;
+    margin: 15px 0;
+    flex-basis: 50%;
+}
+.product-Img{
+    width: 150px;
+    margin-right: 10px;
+    /* border-radius: 50%; */
+}
+.product-content{
+    padding: 10px 0;
+}
+.product-name-price{
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+}
+.product-name{
+    flex: 2;
+    color: #000;
+    
+}
+.product-price{
+    flex: 1;
+}
+.product-description{
+
+}
+.btn-view-all{
+    text-align: center;
+}
+.View-all{
+    border: 3px solid rgb(2, 2, 2);
+    padding: 5px 10px;
+    margin: 20px auto;
+    border-radius: 5px;
+}
