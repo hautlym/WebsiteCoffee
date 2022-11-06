@@ -258,3 +258,19 @@ img {
     margin: 20px auto;
     border-radius: 5px;
 }
+.carousel-inner,
+.carousel{
+    position: unset;
+}
+.carousel-item{
+    position: absolute;    
+    top: 0;
+    right: 10px;
+    display: block;
+    margin: 0;
+}
+.btn-View-about{
+    position: absolute !important;
+    right: 315px;
+    color: white;
+}

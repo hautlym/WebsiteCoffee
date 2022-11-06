@@ -198,12 +198,13 @@ img {
 /* Header */
 .banner {
     background-image:
-        url(./img/baner.jpg);
+        url(../img/baner.jpg);
     background-repeat: no-repeat;
-    background-size: 2000px 100%;
+    background-size: 1500px 100%;
     /* background: rgba(0, 0, 0, 0.7); */
     object-fit: cover;
-    padding-top: 824px;
+    padding-top: 600px;
+    position: relative;
 }
 
 
@@ -237,10 +238,11 @@ img {
 .banner-sub-heading {
     font-family: 'Sofia Pro Bold';
     font-size: 35px;
-    color: #F3F4F6;
+    color: #1c1d1d;
     font-weight: 700;
     line-height: 1.2;
-    text-align: center;
+    text-align: right;
+    margin-right: 200px;
     margin-bottom: 20px;
     padding-top: 200px;
     opacity: 2;
@@ -252,7 +254,7 @@ img {
     color: rgb(255, 255, 255);
     /* text-transform: uppercase; */
     line-height: 1.5;
-    text-align: center;
+    text-align: right;
     margin-bottom: 40px;
     /* width: 500px; */
     margin-left: auto;
