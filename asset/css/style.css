@@ -28,7 +28,8 @@ body {
   color: white;
   list-style-type: none;
   text-align: center;
-  text-align: center;
+  flex: 1;
+  margin-bottom: 0;
 }
 #menu li {
     color: #f1f1f1;
@@ -49,12 +50,11 @@ body {
     margin-left: 15px;
 }
 #menu{
-    padding-top: 40px;
     display: flex;
-    padding-left: 165px;
     /* position: absolute; */
-    padding-right: 165px;
     justify-content: center;
+    align-items: center;
+    padding: 10px 200px;
 }
 .logo{
     margin-right: 60px;
@@ -69,7 +69,7 @@ body {
     display: flex;
     padding-top: 7px;
 }
-.menu_header:hover a{
+.menu_tab_header:hover {
     color: #00a30e;
 }
 .user:hover a i{ 
