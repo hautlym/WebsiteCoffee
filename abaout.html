@@ -17,9 +17,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./asset/css/style.css" />
-  <link rel="stylesheet" href="./asset/css/index.css" />
-  <title>Document</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+  <link rel="stylesheet" href="./asset/css/about.css" />
+
+  <title>Danh sách sản phẩm</title>
 </head>
 
 <body>
@@ -33,7 +34,7 @@
             </a>
           </div>
           <ul class="menu_header">
-            <li><a class="menu_tab_header" href="abaout.html">Trang chủ</a></li>
+            <li><a class="menu_tab_header" href="#">Trang chủ</a></li>
             <li><a class="menu_tab_header 1" href="#">Thực đơn </a></li>
             <li><a class="menu_tab_header 2" href="#">Đặt bàn </a></li>
             <li><a class="menu_tab_header 3" href="#">Giới thiệu</a></li>
@@ -60,75 +61,19 @@
 
 
       </div>
-      <div class="banner">
-        <div class="inner">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-6">
-                <div id="banner-carousel" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    <div class="carousel-item" data-bs-interval="">
-                      <p class="banner-sub-heading">PHONG CÁCH HỆN ĐẠI</p>
-                      <hr class="dashed" />
-                      <a href="#" class="btn btn-white btn-animated btn-View-about">Xem thêm
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+    
+      <div class="section_menu_sp">
+        <div class="bread_crumd">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a  href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
+              </nav>      
           </div>
-        </div>
-      </div>
-      <div class="section_about">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
-              <div class="module_left a-center">
-                <div class="heading">
-                  <h2 class="large_title">Chúng tôi là</h2>
-                  <span class="mini_title">muối</span>
-                </div>
-                <div class="day_time">
-                  Thứ hai đến Thứ bảy <b>8:30am - 11:00pm</b>
-                  <span class="hidden-xs">|</span>
-                  Hotline:
-                  <a href="tel:19006750">19006750</a>
-                </div>
-                <span>Chúng tôi đi khắp thế giới để tìm kiếm cà phê tuyệt vời.
-                  Trong quá trình đó, chúng tôi phát hiện ra những hạt đậu đặc
-                  biệt và hiếm đến nỗi chúng tôi có thể chờ đợi để mang chúng
-                  về.</span>
-              </div>
-            </div>
-            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
-              <div class="module_right a-center">
-                <img class="lazyload" src="./asset/img/cafehuongvi.jpg" alt="Coffee
-                  House" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section_menu">
-        <h2 class="section_menu-header">
-          Menu hôm nay
+        <h2 class="section_menu-header_sp">
+          tất cả sản phẩm
         </h2>
-        <ul class="nav nav-pills mb-3 tablist" id="pills-tab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-              type="button" role="tab" aria-controls="pills-home" aria-selected="true">Cà phê việt</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-              type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Cà phê thế giới</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
-              type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Cà phê cảm hứng</button>
-          </li>
-
-        </ul>
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
             tabindex="0">
@@ -272,40 +217,26 @@
             tabindex="0">
             ...</div>
         </div>
-        <div class="btn-view-all">
-          <button class="View-all">Xem thêm</button>
+        <div class="page_navigation">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
         </div>
       </div>
-      <div class="section_hours_book form_contact_footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 content_left">
-              <div class="heading a-center">
-                <h2>Giờ mở cửa</h2>
-              </div>
-              <div class="content_hour">
-                <p class="option_1">Thứ 2 - Thứ 6 hàng tuần</p>
-                <span>7am - 11am</span>
-                <span>11am - 10pm</span>
-                <p class="option_2">Thứ 7, Chủ nhật hàng tuần</p>
-                <span>8am - 1 am</span>
-                <span>11am - 9pm</span>
-              </div>
-              <div class="hotline_hour">
-                <div class="sdt">Số điện thoại</div>
-
-                <a href="tel:19006750">19006750</a>
-
-              </div>
-            </div>
-            <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12 to_animate text-center animated fadeInUp">
-              <div class="banner-hours-book">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="section_service_end">
             <div
               class="wrap_item_srv service_content_h not-nav2 swiper-container swiper-container-initialized swiper-container-horizontal">
