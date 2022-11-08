@@ -373,7 +373,6 @@ select {
     font-size: 36px;
     font-weight: 700;
     margin: 0;
-    color: #e7b45a;
     text-align: center;
 }
 .section_hours_book .content_left .content_hour {
@@ -547,4 +546,43 @@ select {
     justify-content: center;
     width: 100%;
     position: relative;
+}
+.mid_footer {
+    float: left;
+    width: 100%;
+    padding-top: 61px;
+    background-color: black;
+}
+@media (min-width: 1200px)
+{
+
+    .col-lg-5 {
+        width: 41.66666667%;
+    }
+}
+.google-map {
+    width: 100%;
+}
+@media (min-width: 1200px){
+
+    .col-lg-offset-1 {
+        margin-left: 8.33333333%;
+    }
+}
+.col-lg-6 {
+    width: 50%;
+}
+.col-lg-12{
+
+        text-align: center;
+        /* top: 15px; */
+        padding-top: 160px;
+  
+}
+.contact{
+    color: white;
+
+}
+.summary_footer{
+ font-size: 32;
 }
