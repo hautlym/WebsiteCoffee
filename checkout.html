@@ -18,7 +18,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./asset/css/style.css">
-    <link rel="stylesheet" href="./asset/css/cart.css" />
+    <link rel="stylesheet" href="./asset/css/checkout.css" />
 
     <title>giỏ hàng </title>
 </head>
@@ -34,8 +34,8 @@
                         </a>
                     </div>
                     <ul class="menu_header">
-                        <li><a class="menu_tab_header" href="index.html">Trang chủ</a></li>
-                        <li><a class="menu_tab_header 1" href="list_product.html">Thực đơn
+                        <li><a class="menu_tab_header" href="#">Trang chủ</a></li>
+                        <li><a class="menu_tab_header 1" href="#">Thực đơn
                             </a></li>
                         <li><a class="menu_tab_header 2" href="#">Đặt bàn
                             </a></li>
@@ -60,66 +60,80 @@
                     </div>
 
                 </div>
-                <div class="section_menu_cart">
+                <div class="section_menu_checkout">
                     <div class="bread_crumd">
                         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">cart</li>
+                                <li class="breadcrumb-item active" aria-current="page">thanh toán</li>
                             </ol>
                         </nav>
                     </div>
-                    <div class="cart">
+                    <div class="checkout">
                         <div class="container">
-                            <table class="table">
-                                <thead>
-                                    <tr class="text-center">
-                                        <th>Hình ảnh</th>
-                                        <th>Tên</th>
-                                        <th>Giá gốc</th>
-                                        <th>Giảm giá</th>
-                                        <th>Số lượng</th>
-                                        <th>Tạm tính</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="tbody text-center">
-                                    <tr>
-                                            <td  data-label=""><img class="image" src="./asset/img/cafe.jpeg" alt=""></td>
-                                            <td  data-label="Tên" class="name"><p>cà phê</p></td>
-                                            <td  data-label="Giá gốc" class="price"><p>100.000</p></td>
-                                            <td  data-label="Giảm giá" class="discount justify-content-end"><p>50.000</p></td>
-                                            <td  data-label="Số lượng" class="quantity">
-                                                <div class="soluong d-flex align-items-center">
-                                                    <i class="fas fa-plus"></i>
-                                                    <input type="number" value="1">
-                                                    <i class="fas fa-minus"></i>
-                                                </div>
-                                            </td>
-                                            <td  data-label="Tổng" class="total"><p>300.000</p></td> 
-                                            <td  data-label="" class="delete"><i class="fas fa-times"></i></td>
-                                        </tr>
-                
-                                        <tr>
-                                            <td  data-label="" ><img class="image" src="img/chair.jpg" alt=""></td>
-                                            <td  data-label="Tên" class="name"><p>Ghế gỗ</p></td>
-                                            <td  data-label="Giá gốc" class="price"><p>100.000</p></td>
-                                            <td  data-label="Giảm giá" class="discount"><p>50.000</p></td>
-                                            <td  data-label="Số lượng" class="quantity text-end">
-                                                <div class="soluong d-flex align-items-center">
-                                                    <i class="fas fa-plus"></i>
-                                                    <input type="number" value="1">
-                                                    <i class="fas fa-minus"></i>
-                                                </div>
-                                            </td>
-                                            <td  data-label="Tổng" class="total"><p>300.000</p></td> 
-                                            <td  data-label="Xoa" class="delete justify-content-start"><i class="fas fa-times"></i></td>
-                                        </tr>
-                                </tbody>
-                            </table>
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <p class="transport">
+                                    <p class="tran-heading">1.Thông tin giao hàng</p>
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <input type="name" placeholder="Họ Tên">
+                                        </div>
+                                        <div class="col-5">
+                                            <input type="number" placeholder="Số điện thoại">
+                                        </div>
+                                    </div>
+                                    <input type="email" placeholder="Email">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <select name="calc_shipping_provinces" required="">
+                                                <option value="">Tỉnh / Thành phố</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-6">
+                                            <select name="calc_shipping_district" required="">
+                                                <option value="">Quận / Huyện</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <input type="text" placeholder="Địa chỉ">
+                                    <textarea name="" id="" cols="30" rows="10" placeholder="Ghi chú"></textarea>
+                                    </p>
+                                    <div class="payment">
+                                        <p class="pay-heading">2. Phương thức thanh toán </p>
+                                        <div class="live d-flex align-items-center">
+                                            <input type="radio" class="radio1" name="ok">
+                                            <i class="fas fa-truck"></i>
+                                            <p>THANH TOÁN TRỰC TIẾP KHI NHẬN HÀNG</p>
+                                        </div>
+                                        <div class="oline d-flex align-items-center">
+                                            <input type="radio" class="radio1" name="ok">
+                                            <i class="fas fa-id-card"></i>
+                                            <p>THANH TOÁN TRỰC TUYẾN</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <p class="order-heading">3. Đặt hàng </p>
+                                    <div class="order">
+                                        <div class="order-intro">
+                                        </div>
+                                        <hr>
+                                        <div class="total">
+                                            <div class="row">
+                                                <div class="col-4">Tổng cộng:</div>
+                                                <div class="col-8 text-end tongtatca">2000.000</div>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <button class="btn">Đặt hàng</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="thanhtoan">
-                        <div class="container">
+                     </div>
+                    <!-- <div class="container">
                             <div class="row">
                                 <div class="col-lg-6 col-12">
                                     <div class="coupon align-items-center
@@ -158,8 +172,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                     
+                        </div> -->
+                    
                 </div>
                 <div class="section_service_end">
                     <div class="wrap_item_srv service_content_h not-nav2
