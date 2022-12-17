@@ -8,6 +8,7 @@ using BTL_DoAn.ApiIntegration.Service.UserApiClient;
 using BTL_DoAn.Application.Catalog.Validate;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.HttpOverrides;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -58,6 +59,10 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 
 }
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
 app.UseAuthentication();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
