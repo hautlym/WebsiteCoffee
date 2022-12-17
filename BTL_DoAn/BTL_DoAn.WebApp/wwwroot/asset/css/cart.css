@@ -1,0 +1,376 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.top-header {
+    background-color: #2F333A;
+    height: 30px;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section_menu_cart {
+    padding-top: 50px;
+}
+
+.bread_crumd {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 1290px;
+}
+
+
+
+.hinh-anh img {
+    width: 150px;
+    margin-left: 200px;
+}
+
+.item-gio-hang {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ten {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 200px;
+}
+
+.gia {
+    font-size: 20px;
+    font-weight: bold;
+    color: #96b416;
+}
+
+    .gia .giagoc {
+        padding-right: 50px;
+    }
+
+.soluong {
+    /* width: 20px; */
+    height: 50px !important;
+    border: none;
+    justify-content: center;
+}
+
+.tong-tien {
+    font-size: 20px;
+    color: #96b416;
+    font-weight: bold;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .table tbody tr:nth-child(even) {
+        background-color: #f5f5f5;
+    }
+
+.image {
+    width: 150px;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+    /* padding-right: 40px !important; */
+    color: #5c5c5c;
+}
+
+    .name p {
+        margin-top: 25px !important;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+    }
+
+.price {
+    font-size: 15px;
+}
+
+    .price p {
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 25px !important;
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+    }
+
+.discount {
+    font-size: 15px;
+}
+
+    .discount p {
+        margin-top: 25px !important;
+        font-size: 15px;
+        font-weight: 500;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    }
+
+.soluong {
+    margin-top: 10px;
+    /* margin-right: 20px; */
+}
+
+.quantity {
+    margin-left: 20px !important;
+}
+
+.total {
+    font-size: 15px;
+    /* padding-left: 40px !important; */
+}
+
+    .total p {
+        margin-top: 25px !important;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    }
+
+.delete i {
+    margin-top: 30px;
+    text-align: start;
+}
+
+.soluong {
+    margin-bottom: 35px;
+}
+
+    .soluong input {
+        width: 30px;
+        height: 28px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+
+    .soluong i {
+        padding: 5px;
+        background-color: #F3F4F6;
+        color: grey;
+        border: 1px solid #ddd;
+        background-color: white;
+    }
+
+.coupon-btn {
+    background-color: #c89551;
+    border: none;
+    color: white;
+    padding: 5px;
+    /* border-radius: 5px; */
+    width: 100px;
+    height: 35px;
+    font-weight: 500;
+    border: 1px solid #c89551;
+}
+
+    .coupon-btn:hover {
+        background-color: #af7c37;
+    }
+
+.input-coupon {
+    height: 35px;
+    /* border-radius: 5px; */
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+    .input-coupon:focus {
+        outline: none;
+    }
+
+.checkout {
+    background-color: #c89551;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+    .checkout:hover {
+        background-color: #af7c37;
+    }
+
+.cartBanner {
+    background-image: url(../img/baner.jpg);
+    background-repeat: no-repeat;
+    background-size: 2000px 100%;
+    /* background: rgba(0, 0, 0, 0.7); */
+    object-fit: cover;
+}
+
+.inner {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.title-heading {
+    padding-top: 200px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.intro {
+    font-size: 16px;
+    color: white;
+    padding-bottom: 120px;
+}
+
+    .intro a {
+        color: white;
+        font-weight: 500;
+    }
+
+        .intro a:hover {
+            color: #c89551;
+        }
+
+.totall {
+    box-shadow: 1px 1px 20px rgb(0 0 0 / 30%);
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 100px;
+}
+
+    .totall p {
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+.total p {
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+.coupon {
+    margin-bottom: 20px;
+}
+
+thead tr {
+    background-color: #c89551;
+    color: white;
+    border-radius: 8px;
+}
+
+/*responsive*/
+
+@media(max-width: 776px) {
+    .table thead {
+        display: none;
+    }
+
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+        display: block;
+        width: 100%;
+    }
+
+        .table tr {
+            margin-bottom: 15px;
+        }
+
+        .table td {
+            text-align: right;
+            padding-left: 50%;
+            text-align: right;
+            position: relative;
+        }
+
+            .table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 15px;
+                font-size: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
+
+    .tbody p,
+    .soluong,
+    .delete i {
+        margin: 0 !important;
+    }
+
+    .soluong {
+        height: 30px !important;
+    }
+
+    .image {
+        width: 25% !important;
+        padding-left: 0 !important;
+    }
+
+    .totall {
+        width: 100% !important;
+    }
+
+    /* .total p{
+        padding-right: 10px;
+    } */
+}
+
+@media (max-width: 992px) {
+    .cart .container {
+        max-width: 1000px;
+    }
+
+    .res-home a {
+        color: black !important;
+    }
+}
+
+@media (max-width: 776px) {
+    .soluong {
+        justify-content: flex-end;
+        padding-right: 0px;
+    }
+
+    .quantity {
+        margin: 0 !important;
+    }
+
+    .delete {
+        text-align: start !important;
+    }
+
+    tr {
+        margin-bottom: 30px !important;
+    }
+}
+
+@media (max-width: 430px) {
+    .number-buy {
+        right: -45px;
+    }
+}

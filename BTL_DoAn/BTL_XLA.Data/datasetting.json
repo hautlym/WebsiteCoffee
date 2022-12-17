@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "BTL_DoAn_Database": "Server=DESKTOP-3T571E1\\HAUTLYM;Database =BTL_DoAn;Trusted_Connection=True;TrustServerCertificate=True"
+  }
+}
