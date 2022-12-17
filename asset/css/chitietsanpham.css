@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+/* .container{
+} */
+
+.detail_Product{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    background-image: url(../img/baner.jpg);
+    background-repeat: no-repeat;
+    background-size: 2000px 100%;
+    /* background: rgba(0, 0, 0, 0.7); */
+    object-fit: cover;
+
+}
+
+.detail_Product h3{
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.selection_Product{
+    width: 100%;
+    height: 700px;
+    margin-top: 20px;
+}
+
+.img_Product {
+    height: 505px;
+    text-align: center;
+    border: 1px solid rgb(229, 227, 227);
+    border-radius: 3px;
+}
+
+.img_Product img{
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 90%;
+}
+
+.img_detail{
+    margin-top: 15px;
+}
+
+.img_detail img{
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border: 1px solid #ff9601;
+}
+
+.right_selection{
+    height: 500px;
+}
+
+/* .title_Product {
+
+} */
+
+.title_Product h3{
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.title_Product p{
+    font-size: 24px;
+    font-weight: 300;
+    color: #ff9601;
+    padding-top: 5px;
+}
+
+.count_Product{
+    display: flex;
+    margin-top: 20px;
+}
+
+.count_Product p{
+    display: block;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.count_Product input{
+    width: 50px;
+    border: 1px solid #ccc
+}
+
+.select_Size{
+    margin-top: 20px;
+}
+
+.select_Size .size_title{
+    font-size: 20px;
+
+}
+
+.select_Size .size{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+.select_Size .size p{
+    font-size: 18px;
+    border: 1px solid rgb(179, 178, 178);
+    border-radius: 5px;
+    width: 25%;
+    text-align: center;
+    padding: 6px 0;
+    display: block;
+    cursor: pointer;
+}
+
+/* .select_Size .size p:hover{
+    background-color: #ff9601;
+    color: #fff;
+    border: none;
+} */
+
+.select_Topping{
+    margin-top: 20px;
+}
+
+.select_Topping .topping_title{
+    font-size: 20px;
+}
+
+.select_Topping .topping{
+    margin-top: 15px;
+}
+
+.topping_1 .label_topping1{
+    display: flex;
+    border: 1px solid #ccc;
+    width: 48%;
+    border-radius: 5px;
+}
+
+.topping .topping_1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+
+.topping .topping_1 input{
+    opacity: 0;
+    position: absolute;
+}
+
+.topping .topping_1 .content_check{
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    /* background-color: #ff9601; */
+}
+
+.topping .topping_1 .content_check p{
+    font-size: 15px;
+}
+
+/* Check topping */
+.input_1:checked ~ .tp1,
+.input_2:checked ~ .tp2,
+.input_3:checked ~ .tp3,
+.input_4:checked ~ .tp4,
+.input_5:checked ~ .tp5,
+.input_6:checked ~ .tp6
+{
+    background-color: #ff9601;
+    color: #fff;
+}
+
+
+
+/* Thanh toán */
+
+.button_Pay{
+    margin-top: 55px;
+}   
+
+.button_Pay button{
+    padding: 15px 0;
+    width: 100%;
+    font-size: 18px;
+    background-color: #ff9601;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.button_Pay button:hover{
+    background-color: #ff9501e3;
+}
+
+/* Mô tả sản phẩm */
+.description_Product{
+    height: 200px;
+}
+
+.description_Product h3{
+    font-size: 24px;
+}
+
+.description_Product p{
+    font-size: 18px;
+    margin-top: 15px;
+    line-height: 40px;
+    text-align: justify;
+}
+
+/* Sản phẩm tương tự */
+.similar_product{
+    height: 4   00px;
+    
+}
+
+.similar_product h3{
+    font-size: 24px;
+
+}
+
+.similar_product .img_similar_product{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.similar_product .list_img_similar{
+    display: block;
+
+}
+
+.similar_product img{
+    display: block;
+    height: 250px;
+    width: 250px;
+    border: 1px solid #ff9601;
+}
+
+.similar_product .list_img_similar h3{
+    margin-top: 15px;
+}
+
+.similar_product .list_img_similar p{
+    font-size: 20px;
+    color: #ff9601;
+    margin-top: 5px;
+}
+
+/* footer */
+
+footer{
+    height: 500px;
+    border: 1px solid red;
+}

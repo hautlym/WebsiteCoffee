@@ -1,0 +1,145 @@
+﻿@using BTL_DoAn.Application.Catalog.Common
+@using BTL_DoAn.Application.Catalog.Policies
+@model PageResult<PolicyViewModels>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    int i = 1;
+}
+@section Scripts{
+<script>
+    setTimeout(function(){
+        $('#msgAlert').fadeOut("slow");
+    },2000);
+
+</script>
+}
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Danh sách chính sách</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Trang chủ</a></li>
+        <li class="breadcrumb-item active">Danh sách chính sách </li>
+    </ol>
+
+    <div class="card mb-12">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <a asp-action="Create" class="btn btn-success">Thêm chính sách</a>
+
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <form asp-action="Index" asp-controller="Policy" method="post">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <input type="text" value="@ViewBag.Keyword" name="keyword" class="form-control" />
+
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <button class="btn btn-primary" type="submit">Tìm kiếm</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <div class="col-md-2">
+                            <a class="btn btn-secondary " href="@Url.Action("Index","Policy",new {keyword = ""})">Reset</a>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="card-body">
+
+            @if (ViewBag.SuscessMsg != null)
+            {
+                <div id="msgAlert" class="alert alert-success" role="alert">
+                    @ViewBag.SuscessMsg
+                </div>
+            }
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            STT
+                        </th>
+                        <th>
+                            Tên Chính sách
+                        </th>
+
+                        <th>
+                            Giảm giá
+                        </th>
+                        <th>
+                            sản phẩm
+                        </th>
+                        <th>
+                            Ngày bắt đầu
+                        </th>
+                        <th>
+                            Ngày kết thúc
+                        </th>
+                        <th>
+                            Mã giảm giá
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Items)
+                    {
+                        <tr>
+                            <td>
+                                @i
+                                @{
+                                    i++;
+                                }
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PolicyName)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Discount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ProductId)
+                            </td>
+                            <td>
+
+                                @item.StartDate.ToLongDateString()
+                            </td>
+                            <td>
+                                @item.EndDate.ToLongDateString()
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Voucher)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Sửa", "Edit", new { id = item.PolicyId },new {@class= "btn btn-success"})
+                                @Html.ActionLink("Chi tiết", "Details", new { id = item.PolicyId },new {@class= "btn btn-primary"})
+                                @Html.ActionLink("Xóa", "Delete", new { id = item.PolicyId },new {@class= "btn btn-danger"})
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            @await Component.InvokeAsync("Pager", Model)
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+<script>
+    setTimeout(function(){
+        $('#msgAlert').fadeOut("slow");
+    },2000);
+
+</script>
+}
+<div class="container-fluid">
+    <div class="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="info">
+                        <div class="info-heading">Thông tin</div>
+                        <div class="addresss d-flex align-items-center">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>251 Nam Yên, Nam Từ Liêm, Hà Nội, VN</p>
+                        </div>
+                        <hr >
+                        <div class="phone d-flex align-items-center">
+                            <i class="fas fa-phone"></i>
+                            <p>
+                                Mobile: (+84) 012.445.6789
+                                Hotline: 1900.4567
+                            </p>
+                        </div>
+                        <hr >
+                        <div class="email d-flex align-items-center">
+                            <i class="fas fa-envelope"></i>
+                            <p>
+                                linhdr141020@gmail.com
+                                support@wws.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <p class="content">Nội dung liên hệ</p>
+                    @if (ViewBag.SuscessMsg != null)
+                    {
+                    <div id="msgAlert" class="alert alert-success" role="alert">
+                            @ViewBag.SuscessMsg
+                    </div>
+                    }
+                    <div class="inputs">
+                        <form action="/Home/Contact" method="post">
+                        <div class="name" >
+                            Họ tên
+                            <input type="text" name="Name">
+                        </div>
+                        <div class="email" >
+                            Email
+                            <input type="text" name="Email">
+                        </div>
+                        <div class="title">
+                            Tiêu đề
+                            <input type="text" name="NumberPhone">
+                        </div>
+                        <div class="message" >
+                            Tin nhắn
+                            <input type="text"  id="textarea" cols="30" rows="10" name="Message"></input>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn" style="padding: 5px 10px;">Gửi</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
