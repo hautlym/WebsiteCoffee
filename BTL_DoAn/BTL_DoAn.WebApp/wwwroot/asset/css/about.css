@@ -1,0 +1,162 @@
+a{
+    text-decoration: none;
+}
+
+/* Tab menu */
+.section_menu_sp{
+    background-color: #FFFAFA;
+    padding-top: 50px;
+}
+.section_menu-header_sp{
+    width: 260px ;
+    font-size: 28px;
+    margin: 0 auto;
+    padding: 30px 0;
+    color: #e7b45a;
+    text-align: center;
+    font-family: "Oswald",sans-serif;
+}
+.bread_crumd{
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 1000px;
+}
+.breadcrumb-item a{
+    color: #e7b45a;
+}
+.product-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 1000px;
+}
+.product-item{
+    display: flex;
+    margin: 30px 0;
+    flex-basis: 50%;
+    align-items: center;
+}
+.product-Img{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.product-content {
+    padding: 10px 0;
+    position: relative;
+    width: 345px;
+}
+.product-content:before
+{
+    content: "";
+    width: 100%;
+    position: absolute;
+    border-bottom: dashed 1px #252525;
+    top: 33px;
+    left: 0%;
+}
+.product-name-price{
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.product-name{
+    flex: 6;
+    color: #000;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+   
+    z-index: 1;
+}
+.product-price{
+    flex: 2;
+    text-align: end;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #FFFAFA;
+    width: 100%;
+}
+.product-description{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.btn-view-all{
+    text-align: center;
+    display:block;
+}
+
+.carousel-inner,
+.carousel{
+    position: unset;
+}
+.carousel-item{
+    position: absolute;    
+    top: 0;
+    right: 10px;
+    display: block;
+    margin: 0;
+}
+.btn-View-about{
+    position: absolute !important;
+    right: 315px;
+    color: white;
+}
+.pagination
+{
+    width: 150px;
+    margin: 20px auto 50px;
+    justify-content: center;
+}
+.pagination-previus
+{
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+    margin: 3px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.pagination-active
+{
+    padding: 3px 10px;
+    margin: 3px;
+    color: #fff;
+    background-color: #916841;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.pagination-page
+{
+    padding: 3px 10px;
+    margin: 3px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+    
+}
+.pagination-next
+{
+    padding: 3px 10px;
+    margin: 3px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 5px;
+
+}
+.pagination-previus:hover,
+.pagination-page:hover,
+.pagination-next:hover
+{
+    background-color: #916841;
+    cursor: pointer;
+    color: #fff;
+}
+
+

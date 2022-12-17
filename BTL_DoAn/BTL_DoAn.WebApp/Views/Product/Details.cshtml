@@ -1,0 +1,208 @@
+﻿@model DetailsProductViewModels
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    string url = "https://localhost:7034/user-content/";
+}
+<div class="container-fluid">
+
+    <!-- Chi tiết sản phẩm -->
+    <div class="detail_Product">
+        <h3>Chi tiết sản phẩm</h3>
+    </div>
+
+    <div class="grid wide">
+
+        <!-- Lựa chọn thanh toán -->
+        <div class="selection_Product">
+            <div class="Product">
+                <div class="row">
+                    <div class="col l-5">
+                        <div class="img_Product">
+                            <img src="@Url.Content(@url+@Model.ProductDeltails.ThumbnailImage[0].ImagePath)" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col l-7">
+                        <div class="right_selection">
+
+                            <div class="title_Product">
+                                <h3 class="name_Product">@Model.ProductDeltails.ProductName</h3>
+                                <div style="display:flex">
+                                    <p id="price_product" class="price_product">
+                                    <p class="price">@String.Format("{0:n0}", @Math.Floor( Model.ProductDeltails.ProductPrice-Model.ProductDeltails.ProductPrice*Model.ProductDeltails.Discount/100)) VNĐ</p>
+                                    </p>
+                                    @if (Model.ProductDeltails.Discount != 0)
+                                    {
+                                        <p class="root-price" style="color: grey;margin: 0 0 0 15px;">@String.Format("{0:n0}", Model.ProductDeltails.ProductPrice) VNĐ</p>
+
+                                    }
+                                </div>
+
+                            </div>
+                              <form asp-action="AddToCart" asp-controller="Cart" method="post" style="width: 100%;">
+                            <div class="count_Product">
+                                <div class="soluong d-flex align-items-center" style="justify-content:inherit">
+
+                                    <p class="sl-text">Số lượng: </p>
+                                    <button type="button" class="Add_Quantity_Product">
+                                        <i class="fas fa-plus"></i>
+
+                                    </button>
+                                    <input type="number" id="Quantity_Product" name="Quantity" value="1" />
+                                    <button type="button" class="Minsus_Quantity_Product">
+                                        <i class="fas fa-minus"></i>
+
+                                    </button>
+                                </div>
+                                <div class="select_Size">
+                                    <p class="size_title">Chọn size (bắt buộc) :</p>
+                                    <div class="size">
+                                        <p id="small">Nhỏ + 0đ</p>
+                                        <p id="medium">Vừa + 6.000đ</p>
+                                        <p id="large">Lớn + 10.000đ</p>
+                                    </div>
+                                </div>
+
+                                <div class="select_Topping">
+                                    <p class="topping_title">Topping :</p>
+                                    <div class="topping">
+                                        <div class="topping_1">
+                                            <label class="label_topping1" for="check_topping1">
+                                                <input class="input_1" type="checkbox" name="" id="check_topping1">
+                                                <div class="content_check tp1">
+                                                    <p>Kem phô mai Macchiato + 10.000đ</p>
+                                                </div>
+                                            </label>
+
+                                            <label class="label_topping1" for="check_topping2">
+                                                <input class="input_2" type="checkbox" name="" id="check_topping2">
+                                                <div class="content_check tp2">
+                                                    <p>Trân châu trắng + 10.000đ</p>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="topping_1">
+                                            <label class="label_topping1" for="check_topping3">
+                                                <input class="input_3" type="checkbox" name="" id="check_topping3">
+                                                <div class="content_check tp3">
+                                                    <p>Trân châu baby + 10.000đ</p>
+                                                </div>
+                                            </label>
+
+                                            <label class="label_topping1" for="check_topping4">
+                                                <input class="input_4" type="checkbox" name="" id="check_topping4">
+                                                <div class="content_check tp4">
+                                                    <p>Trân châu đen + 10.000đ</p>
+                                                </div>
+                                            </label>
+                                        </div>
+
+                                        <div class="topping_1">
+                                            <label class="label_topping1" for="check_topping5">
+                                                <input class="input_5" type="checkbox" name="" id="check_topping5">
+                                                <div class="content_check tp5">
+                                                    <p>Thạch dừa 7 màu + 10.000đ</p>
+                                                </div>
+                                            </label>
+
+                                            <label class="label_topping1" for="check_topping6">
+                                                <input class="input_6" type="checkbox" name="" id="check_topping6">
+                                                <div class="content_check tp6">
+                                                    <p>Kem phô mai Machiato + 10.000đ</p>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="button_Pay">
+                                     <input type="hidden" name="ProductId" value="@Model.ProductDeltails.Id">
+                                    <button type="submit">Đặt giao hàng tại nơi</button>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="button_selection">
+                </div>
+            </div>
+
+            <!-- Mô tả sản phẩm -->
+            <div class="description_Product">
+                <h3>Mô tả sản phẩm : </h3>
+                <p> @Model.ProductDeltails.ProductDescription</p>
+            </div>
+
+            <!-- Sản phẩm tương tự -->
+            <div class="similar_product">
+                <h3>Sản phẩm tương tự</h3>
+                <div class="img_similar_product">
+                    @foreach (var item in Model.SuggestProduct)
+                    {
+                        <div class="list_img_similar">
+                            <a href="@Url.Action("Details","Product",new{id = @item.Id})">
+                                <img src="@Url.Content(@url+@item.ThumbnailImage[0].ImagePath)" alt="">
+                                <h3>@item.ProductName</h3>
+                                <p>@String.Format("{0:n0}", @Math.Floor( Model.ProductDeltails.ProductPrice-Model.ProductDeltails.ProductPrice*Model.ProductDeltails.Discount/100))đ</p>
+
+                            </a>
+                        </div>
+
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var smallSize = document.getElementById('small');
+    var mediumSize = document.getElementById('medium');
+    var largeSize = document.getElementById('large');
+    var price = document.getElementById('price_product');
+    let x = parseInt(price.textContent);
+
+
+
+
+    smallSize.onclick = function(){
+        smallSize.classList.add('active');
+        mediumSize.classList.remove('active');
+        largeSize.classList.remove('active');
+
+        smallSize.style.border = 'none'
+        mediumSize.style.border = '1px solid #ccc' ;
+        largeSize.style.border = '1px solid #ccc' ;
+
+     }
+
+    mediumSize.onclick = function(){
+
+        mediumSize.classList.add('active');
+        smallSize.classList.remove('active');
+        largeSize.classList.remove('active');
+
+        smallSize.style.border = '1px solid #ccc'
+        mediumSize.style.border = 'none' ;
+        largeSize.style.border = '1px solid #ccc';
+
+     }
+
+    largeSize.onclick = function(){
+
+        largeSize.classList.add('active') ;
+        mediumSize.classList.remove('active');
+        smallSize.classList.remove('active');
+
+        smallSize.style.border = '1px solid #ccc'
+        mediumSize.style.border = '1px solid #ccc' ;
+        largeSize.style.border = 'none';
+    }
+</script>
+<script src="~/js/quantityProduct.js"></script>
