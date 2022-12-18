@@ -48,7 +48,7 @@ builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30);
 });
-
+builder.WebHost.UseUrls("http://localhost:8003", "https://localhost:8004");
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
