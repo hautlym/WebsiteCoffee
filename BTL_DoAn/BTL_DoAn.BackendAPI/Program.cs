@@ -75,13 +75,9 @@ builder.Services.AddAuthentication(opt =>
                    IssuerSigningKey = new SymmetricSecurityKey(signingKeyBytes)
                };
            });
-
-builder.WebHost.UseUrls("http://localhost:8000", "https://localhost:8001");
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-app.UseSwagger();
-app.UseSwaggerUI();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
